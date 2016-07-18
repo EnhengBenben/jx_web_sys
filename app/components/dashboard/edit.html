@@ -1,0 +1,54 @@
+
+<div class="ibox">
+  <div class="ibox-title">
+    <h5>编辑单位</h5>
+  </div>
+  <div class="ibox-content">
+    <form class="form-horizontal" novalidate>
+      <div class="form-group">
+        <div class="form-group">
+          <label class="col-md-3 control-label" for="id">账号</label>
+          <div class="col-md-7">
+            <input type="text" required ng-model="vm.edit.admin.data.username" class="form-control" id="id">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label" for="url">域名</label>
+          <div class="col-md-7">
+            <input type="text" required ng-model="vm.edit.domain_name" class="form-control" id="url">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label" for="password">密码</label>
+          <div class="col-md-7">
+            <input type="password" required="required" ng-minlength="6" ng-model="vm.edit.admin.data.password" class="form-control" id="password" placeholder="请输入密码">
+          </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-3 control-label" for="name">招生单位名称</label>
+        <div class="col-md-7">
+          <input type="text" required ng-model="vm.edit.name" class="form-control" id="name" placeholder="请输入招生单位名称">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="people">联系人</label>
+        <div class="col-md-7">
+          <input type="text" required ng-model="vm.edit.contact" class="form-control" id="people" placeholder="请输入联系人">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="phone">联系电话</label>
+        <div class="col-md-7">
+          <input type="tel" required ng-model="vm.edit.mobile" class="form-control" id="phone" placeholder="请输入联系电话">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-7 col-md-offset-3">
+          <button type="submit" class="btn btn-primary m-b" ng-click="vm.save()">保存</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+

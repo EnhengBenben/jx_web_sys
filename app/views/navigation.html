@@ -1,0 +1,90 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul side-navigation class="nav metismenu" id="side-menu">
+      <li class="nav-header">
+        <div class="dropdown profile-element">
+          <span style="color:white;">
+            会员管理系统
+          </span>
+        </div>
+        <div class="logo-element">
+          <i class="fa fa-2x fa-medkit"></i>
+        </div>
+      </li>
+      <li ng-class="{active: $state.includes('admin.members')}">
+        <a href=""><i class="fa fa-fw fa-group"></i> <span class="nav-label">学会会员</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('admin.members')}">
+          <li ui-sref-active="active"><a ui-sref="admin.members.users.list({status: 'normal'})">会员列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.members.users.list({status: 'pending-or-modified'})">审核会员</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.members.users.list({status: 'disabled'})">禁用会员</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.members.users.create">添加会员</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.members.hospitals.list">会员设置</a></li>
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('admin.courses')}">
+        <a href=""><i class="fa fa-fw fa-graduation-cap"></i> <span class="nav-label">课程管理</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('admin.courses')}">
+          <li ui-sref-active="active"><a ui-sref="admin.courses.list({status: 'published'})">课程列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.courses.list({status: 'pending'})">未发布课程</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.courses.create">添加课程</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.courses.survey_templates">评价模版</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.courses.exam_templates">试题库</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.courses.statistic">课程统计</a></li>
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('admin.conferences')}">
+        <a href=""><i class="fa fa-fw fa-calendar"></i> <span class="nav-label">会议</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('admin.conferences')}">
+          <li ui-sref-active="active"><a ui-sref="admin.conferences.list({status: 'published'})">会议列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.conferences.list({status: 'pending'})">未发布会议</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.conferences.create">添加会议</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.conferences.survey_templates">评价模版</a></li>
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('admin.votes')}">
+        <a href=""><i class="fa fa-fw fa-bullhorn"></i> <span class="nav-label">学会通知</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('admin.notices')}">
+          <li ui-sref-active="active"><a ui-sref="admin.notices.list({status: 'published'})">通知列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.notices.list({status: 'pending'})">未发布通知</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.notices.create">添加通知</a></li>
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('admin.forum')}">
+        <a href=""><i class="fa fa-fw fa-commenting-o"></i> <span class="nav-label">交流论坛</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('admin.forum')}">
+          <li ui-sref-active="active"><a ui-sref="admin.forum.article_layout.article({status: 'published'})">文章管理</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.forum.categories.setting({settingId:'1'})">栏目设置</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.forum.create">添加文章</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.forum.verify.comment">论坛审核</a></li>
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('admin.votes')}">
+        <a href=""><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="nav-label">投票</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('admin.votes')}">
+          <li ui-sref-active="active"><a ui-sref="admin.votes.list({status: 'published'})">投票列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.votes.list({status: 'pending'})">未发布投票</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.votes.create">添加投票</a></li>
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('admin.surveys')}">
+        <a href=""><i class="fa fa-fw fa-question-circle"></i> <span class="nav-label">调查报名</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('admin.surveys')}">
+          <li ui-sref-active="active"><a ui-sref="admin.surveys.list({status: 'published'})">调查列表</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.surveys.list({status: 'pending'})">未发布调查</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.surveys.create">添加调查</a></li>
+        </ul>
+      </li>
+      <li ng-class="{active: $state.includes('admin.settings')}">
+        <a href=""><i class="fa fa-fw fa-gears"></i> <span class="nav-label">系统设置</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level" ng-class="{in: $state.includes('admin.settings')}">
+          <li ui-sref-active="active"><a ui-sref="admin.settings.system.information">学会信息</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.settings.admins.list">管理员</a></li>
+          <!--<li ui-sref-active="active"><a ui-sref="admin.settings.mp">微信公众号</a></li>-->
+          <li ui-sref-active="active"><a ui-sref="admin.settings.account.change_password">修改密码</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.settings.feedbacks.list">意见反馈</a></li>
+          <li ui-sref-active="active"><a ui-sref="admin.settings.mp_messages.list">微信消息</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

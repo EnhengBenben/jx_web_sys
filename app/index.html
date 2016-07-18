@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>医护进修超级管理员</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+  <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css" />
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="bower_components/angular-datepicker/dist/angular-datepicker.css" />
+  <link rel="stylesheet" href="bower_components/clockpicker/dist/jquery-clockpicker.css" />
+  <link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.css" />
+  <link rel="stylesheet" href="bower_components/chosen/chosen.min.css" />
+  <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css" />
+  <link rel="stylesheet" href="bower_components/ladda/dist/ladda.min.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/summernote/dist/summernote.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- <base href="/"> -->
+</head>
+<body ng-app="merchantApp">
+<!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<toaster-container toaster-options="{'position-class': 'toast-top-center', 'closeButton': true}"></toaster-container>
+<div ui-view></div>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+<script src="bower_components/angular-i18n/angular-locale_zh-hans-cn.js"></script>
+<script src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
+<script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+<script src="bower_components/angular-datatables/dist/angular-datatables.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/bootstrap/angular-datatables.bootstrap.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/colreorder/angular-datatables.colreorder.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/columnfilter/angular-datatables.columnfilter.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/colvis/angular-datatables.colvis.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/fixedcolumns/angular-datatables.fixedcolumns.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/fixedheader/angular-datatables.fixedheader.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/scroller/angular-datatables.scroller.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/buttons/angular-datatables.buttons.js"></script>
+<script src="bower_components/angular-datatables/dist/plugins/select/angular-datatables.select.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<script src="bower_components/AngularJS-Toaster/toaster.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/moment/locale/zh-cn.js"></script>
+<script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
+<script src="bower_components/angular-datepicker/dist/angular-datepicker.js"></script>
+<script src="bower_components/clockpicker/dist/jquery-clockpicker.js"></script>
+<script src="bower_components/angular-file-model/angular-file-model.js"></script>
+<script src="bower_components/metisMenu/dist/metisMenu.js"></script>
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<script src="bower_components/angular-chosen-localytics/chosen.js"></script>
+<script src="bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+<script src="bower_components/chartist/dist/chartist.min.js"></script>
+<script src="bower_components/angular-chartist.js/dist/angular-chartist.js"></script>
+<script src="bower_components/spin.js/spin.js"></script>
+<script src="bower_components/ladda/dist/ladda.min.js"></script>
+<script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/summernote/dist/summernote.js"></script>
+<script src="bower_components/summernote/lang/summernote-zh-CN.js"></script>
+<script src="bower_components/angular-summernote/dist/angular-summernote.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/utils.js"></script>
+<script src="scripts/nonangular.js"></script>
+<script src="scripts/angles.js"></script>
+<script src="scripts/angular_confirm.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/app.config.js"></script>
+<script src="scripts/app.routes.js"></script>
+<script src="scripts/directives.js"></script>
+<script src="scripts/interceptors/auth_interceptor.js"></script>
+<script src="components/admin/admin.controller.js"></script>
+
+<!--dashboard-->
+<script src="components/dashboard/list.controller.js"></script>
+<script src="components/dashboard/dashboard_service.js"></script>
+<script src="components/dashboard/create.controller.js"></script>
+<script src="components/dashboard/open_account.controller.js"></script>
+<script src="components/dashboard/edit.controller.js"></script>
+
+<script src="components/attachment/attachment_service.js"></script>
+<script src="components/auth/auth_service.js"></script>
+<script src="components/auth/login.controller.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>

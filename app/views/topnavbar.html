@@ -1,0 +1,20 @@
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+          <span minimaliza-sidebar></span>
+        </div>
+      <a ui-sref="admin.dashboard" class="open-publish-dialog">
+        <i class="fa fa-home"></i>
+      </a>
+        <a ng-click="admin.openPublishDialog()" class="open-publish-dialog" style="margin-left: 10px">
+            <i class="fa fa-plus-circle" style="font-size: 26px"></i>
+        </a>
+        <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <a ng-click="admin.logout()">
+                    <i class="fa fa-sign-out"></i> 退出
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

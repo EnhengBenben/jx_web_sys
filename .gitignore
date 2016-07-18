@@ -1,6 +1,6 @@
-
-# .v4p backup files
-*~.xml
-
-# Dynamic plugins .dll
-bin/
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
+/.idea
